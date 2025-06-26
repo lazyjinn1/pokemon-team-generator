@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Enable Dark Mode",
+    "description": "Toggle dark mode for a better viewing experience at night.",
+    "type": "toggle",
+    "value": false,
+    "key": "darkMode"
+  },
+  {
+    "title": "Region Selection",
+    "description": "Choose which regions to include in the random team generation.",
+    "type": "buttons",
+    "options": ["Kanto", "Johto", "Hoenn", "Sinnoh", "Unova", "Kalos", "Alola", "Galar", "Paldea", "All"],
+    "value": "All",
+    "key": "region"
+  },
+  {
+    "title": "Enable Legendaries",
+    "description": "Choose a setting to include Legendary Pokemon",
+    "type": "radio",
+    "value": "legendarySetting",
+    "options": ["One Legendary", "Mixed in (equal chance)", "No Legendaries"],
+    "key": "legendarySetting"
+  }
+]

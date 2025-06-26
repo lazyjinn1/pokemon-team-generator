@@ -1,17 +1,28 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import MainPage from './components/mainComponents/MainPage';
+import { SettingsProvider } from './context/SettingsContext';
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { useSettings } from './context/SettingsContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+function AppWrapper() {
+  const { settings } = useSettings();
+
+  return (
+    <div className={`min-h-screen ${settings.darkMode ? 'bg-slate-800 text-white' : 'bg-white text-black'}`}>
+      <MainPage />
+    </div>
+  );
+}
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <SettingsProvider>
+      <AppWrapper />
+    </SettingsProvider>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

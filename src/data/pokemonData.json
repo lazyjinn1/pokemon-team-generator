@@ -1,0 +1,20 @@
+{
+    "normal": "gray-300",
+    "fire": "red-500",
+    "water": "blue-500",
+    "grass": "green-500",
+    "electric": "yellow-400",
+    "ice": "blue-200",
+    "fighting": "red-700",
+    "poison": "purple-500",
+    "ground": "yellow-700",
+    "flying": "indigo-200",
+    "psychic": "pink-500",
+    "bug": "lime-500",
+    "rock": "yellow-600",
+    "ghost": "purple-700",
+    "dragon": "indigo-700",
+    "dark": "gray-800",
+    "steel": "gray-400",
+    "fairy": "pink-300"
+}
