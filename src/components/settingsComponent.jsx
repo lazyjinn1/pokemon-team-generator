@@ -7,7 +7,6 @@ function SettingsComponent({
     type = 'toggle',
     value,
     onChange,
-    name = title.toLowerCase().replace(/\s+/g, '-'),
     options = [],
 }) {
     const [selectedValue, setSelectedValue] = useState(value);
@@ -60,7 +59,6 @@ function SettingsComponent({
                             <label key={option} className={`flex items-center ${settings.darkMode ? "text-white" : ""}`}>
                                 <input
                                     type="radio"
-                                    name={name}
                                     value={option}
                                     checked={selectedValue === option}
                                     onChange={() => handleChange(option)}

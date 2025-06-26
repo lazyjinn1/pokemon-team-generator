@@ -71,13 +71,13 @@ export default function TeamGenerator() {
     };
 
     return (
-        <div className={`min-h-screen ${settings.darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
+        <div className={`min-h-screen w-screen overflow-x-hidden ${settings.darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <HeroBanner />
 
             <div className="grid grid-cols-4 p-4">
                 <button
                     onClick={generateTeam}
-                    className={`mt-4 text-4xl tracking-widest font-bold py-2 px-4 rounded 
+                    className={`mt-4 text-2xl tracking-widest font-bold py-2 px-4 rounded 
                         col-span-2 col-start-2  active:transform active:scale-95 
                         transition-transform duration-200 
                             ${settings.darkMode ? "text-black hover:bg-yellow-500 active:bg-yellow-600 bg-yellow-300" :
@@ -89,7 +89,7 @@ export default function TeamGenerator() {
 
             <div className="p-4">
                 <h2 className="text-center text-3xl mb-4">Your Team:</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center">
                     {team.map((pokemon, index) => (
                         <PokemonCard key={index} pokemon={pokemon} loading={loading} />
                     ))}
