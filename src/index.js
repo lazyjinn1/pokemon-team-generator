@@ -11,7 +11,7 @@ function AppWrapper() {
   const { settings } = useSettings();
 
   return (
-    <div className={`min-h-screen ${settings.darkMode ? 'bg-slate-800 text-white' : 'bg-white text-black'}`}>
+    <div className={`min-h-screen transition-colors ${settings.darkMode ? 'bg-slate-800 text-white' : 'bg-white text-black'}`}>
       <MainPage />
     </div>
   );

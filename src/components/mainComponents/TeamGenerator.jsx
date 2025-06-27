@@ -73,7 +73,18 @@ export default function TeamGenerator() {
     return (
         <div className={`min-h-screen w-screen overflow-x-hidden ${settings.darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
             <HeroBanner />
-
+            <div className="fixed right-0 bottom-0  bg-white text-black p-2 rounded-lg shadow-lg z-10 border-4 border-black">
+                <div className="text-center text-[1rem]">
+                    {settings.region}
+                </div>
+                <div className="text-center text-[1rem]">
+                    {settings.legendarySetting === 'One Legendary'
+                        ? 'One Legendary'
+                        : settings.legendarySetting === 'Mixed in (equal chance)'
+                            ? 'Mixed Legendaries'
+                            : 'No Legendaries'}
+                </div>
+            </div>
             <div className="grid grid-cols-4 p-4">
                 <button
                     onClick={generateTeam}

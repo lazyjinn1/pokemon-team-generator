@@ -13,7 +13,7 @@ function HeroBanner() {
 
     return (
         <div
-            className={`grid grid-cols-1 p-4 text-center shadow-lg ${settings.darkMode ? 'bg-black text-white' : 'bg-red-600 text-white'
+            className={`grid grid-cols-1 p-4 text-center shadow-lg transition-colors ${settings.darkMode ? 'bg-black text-white' : 'bg-red-600 text-white'
                 }`}
         >
             <div>
@@ -21,6 +21,7 @@ function HeroBanner() {
                     Random Pokemon Team Generator
                 </h1>
             </div>
+
             <div>
                 <ul className="flex gap-4 justify-end mt-4">
                     <li>
