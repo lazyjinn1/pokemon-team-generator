@@ -46,7 +46,7 @@ export const getRandomNonLegendaryTeam = async (pokemonList, count) => {
     while (team.length < count && attempts < 100) {
         const random = pokemonList[Math.floor(Math.random() * pokemonList.length)];
         const name = random.name;
-        if (!(await isLegendary(name))) {
+        if (!(isLegendary(name))) {
             const res = await fetch(random.url);
             if (!res.ok) continue;
             const data = await res.json();
